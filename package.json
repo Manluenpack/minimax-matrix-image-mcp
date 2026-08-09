@@ -1,0 +1,45 @@
+{
+  "name": "minimax-matrix-image-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for MiniMax Matrix image synthesis (text-to-image & image-to-image)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "minimax-matrix-image-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "minimax",
+    "matrix",
+    "image-generation",
+    "text-to-image",
+    "image-to-image",
+    "t2i",
+    "i2i"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
